@@ -1,12 +1,15 @@
-package org.sj.ems.entity;
-
+package com.sj.ems.entity;
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
 @Table(name="employees")
 public class Employee {
 
-    @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstname;
