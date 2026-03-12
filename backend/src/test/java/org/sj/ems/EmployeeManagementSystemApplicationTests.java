@@ -1,13 +1,13 @@
-package com.example.internshipchallenge;
+package org.sj.ems;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class InternshipChallengeApplicationTests {
+class EmployeeManagementSystemApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
