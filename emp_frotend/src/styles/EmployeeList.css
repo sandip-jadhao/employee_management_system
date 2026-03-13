@@ -1,5 +1,89 @@
-*{
-    margin:0px;
-    padding:0px;
-    background:#f0f0f0;
+/* Page container */
+div {
+    width: 90%;
+    margin: 40px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page title */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Add employee button */
+button {
+    margin-bottom: 15px;
+    padding: 8px 16px;
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* Table header */
+table thead {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Table header cells */
+table thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table rows */
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Row hover effect */
+table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Action buttons */
+button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Edit button */
+button {
+    background-color: #ffc107;
+    color: black;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+/* Delete button */
+button {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    background-color: #bb2d3b;
 }
