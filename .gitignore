@@ -1,14 +1,97 @@
-# Backend
-backend/target/
-backend/.mvn/
+# ===============================
+# Logs
+# ===============================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Frontend
-frontend/node_modules/
-frontend/build/
+# ===============================
+# Node / React
+# ===============================
+node_modules/
+dist/
+dist-ssr/
+build/
+coverage/
+*.local
+.env
+.env.*
 
-# IDE
+# ===============================
+# Java / Spring Boot
+# ===============================
+target/
+build/
+*.jar
+*.war
+*.ear
+*.class
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Gradle
+.gradle/
+
+# ===============================
+# IDE / Editors
+# ===============================
+.vscode/*
+!.vscode/extensions.json
 .idea/
-.vscode/
+*.iml
 
-# OS
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ===============================
+# OS Files
+# ===============================
 .DS_Store
+Thumbs.db
+
+# ===============================
+# Temporary Files
+# ===============================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ===============================
+# Database
+# ===============================
+*.sql
+*.sqlite
+*.db
+
+# ===============================
+# Application Secrets
+# ===============================
+application-local.properties
+application-dev.properties
+application-prod.properties
+*.keystore
+*.pem
+*.key
+
+# ===============================
+# Testing
+# ===============================
+coverage/
