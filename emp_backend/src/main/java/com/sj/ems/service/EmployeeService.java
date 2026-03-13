@@ -16,7 +16,10 @@ public class EmployeeService {
     public Employee saveEmployee(Employee emp){
         return repository.save(emp);
     }
-    public List<Employee> getAllEmployees(){
-        return repository.findAll();
-    }
+
+    public List<Employee> getAllEmployees(){return repository.findAll();}
+
+    public Employee getEmployeeById(Long id){return repository.findById(id).orElse(null);}
+
+    public void deleteEmployee(Long id){repository.deleteById(id);}
 }

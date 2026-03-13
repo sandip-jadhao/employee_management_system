@@ -10,7 +10,7 @@ public class EmployeeManagementSystemApplication {
 
 
         SpringApplication.run(EmployeeManagementSystemApplication.class, args);
-        System.out.println("I am web application...");
+
     }
 
  }
