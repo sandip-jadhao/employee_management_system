@@ -15,11 +15,7 @@ h2 {
 }
 
 /* Add employee button */
-
-
-
-
-/* Table styling */
+/* Table styling */ 
 table {
     width: 100%;
     border-collapse: collapse;
@@ -51,6 +47,7 @@ table tbody tr:hover {
 
 /* Action buttons */
 button {
+    float: right;
     padding: 6px 10px;
     margin-right: 5px;
     border: none;

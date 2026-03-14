@@ -1,7 +1,10 @@
 import axios from "axios";
+
 const url="http://localhost:8080/ems";
 
 export const getEmployee = () =>axios.get(url);
+
+export const getEmployeeById = (id) =>axios.get(`${url}/${id}`);
 
 export const deleteEmployee = (id) =>axios.delete(`${url}/${id}`);
 

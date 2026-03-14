@@ -1,20 +1,36 @@
 import React,{useEffect,useState} from "react";
 import {getEmployee,deleteEmployee} from "../services/EmployeeService";
 import AddEmployee from "./AddEmployee";
+import UpdateEmployee from "./UpdateEmployee";
 import "../styles/EmployeeList.css";
 
 function EmployeeList({onLogout}) {
 
     const [employees,setEmployees] = useState([]);
     const [showAdd,setShowAdd] = useState(false);
+    const [updateEmployeeId,setUpdateEmployeeId] = useState(null);
+
     const loadEmployee = () =>{
         getEmployee().then((res)=>{
             setEmployees(res.data);
         });
     };
+
     useEffect(()=>{
         loadEmployee();
     },[]);
+
+    if(updateEmployeeId){
+        return (<UpdateEmployee 
+                    employeeId={updateEmployeeId}
+                    onBack={()=>{
+                        setUpdateEmployeeId(null);
+                        loadEmployee();
+                    }}
+                />
+            );
+    }
+
     if(showAdd){
         return (<AddEmployee 
                     onBack={()=>{
@@ -24,6 +40,7 @@ function EmployeeList({onLogout}) {
                 />
             );
     }
+
     const handleDelete = (id)=>{
         deleteEmployee(id).then(()=>{
             loadEmployee();
@@ -32,10 +49,9 @@ function EmployeeList({onLogout}) {
     
     return(
         <div>
-            <h2>Employee Management System</h2>
             <button onClick={onLogout}>Logout</button>
             <button className="btn btn-primary me-2" onClick={() => setShowAdd(true)}>Add New Employee</button>
-        <h2>Employee List</h2>
+            <h2>Employee List</h2>
             <table border="2">
                <thead>
                     <tr>
@@ -56,13 +72,12 @@ function EmployeeList({onLogout}) {
                             <td>{emp.department}</td>
                             <td>{emp.salary}</td>
                             <td>
-                                <button onClick={()=>handleDelete(emp.id)}>Delete</button>
-                                <button>Update</button>
+                                <button className="btn btn-warning" onClick={() => setUpdateEmployeeId(emp.id)}>Update</button>
+                                <button className="btn btn-danger" onClick={()=>handleDelete(emp.id)}>Delete</button>
                             </td>
                        </tr>
                    ))}
                </tbody>
-
              </table>
         </div>
     );

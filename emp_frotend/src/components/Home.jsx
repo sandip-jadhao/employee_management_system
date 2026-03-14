@@ -12,7 +12,7 @@ function Home() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (loginId === "admin" && password === "password") {
+    if (loginId === "admin" && password === "admin") {
       setIsLoggedIn(true);
       setError("");
     } else {
@@ -31,8 +31,9 @@ function Home() {
   }
 
   return (
+    
     <div className="home-container">
-
+        <h2>Employee Management System</h2>
       <form className="login-form" onSubmit={handleLogin}>
 
         <h2 className="login-title">Admin Login</h2>

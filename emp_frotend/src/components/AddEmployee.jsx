@@ -37,8 +37,10 @@ function AddEmployee({onBack}) {
                 <input type="email" name="email" placeholder="Email" value={employee.email} onChange={handleChange} className="form-control mb-2" required />
                 <input type="text" name="department" placeholder="Department" value={employee.department} onChange={handleChange} className="form-control mb-2" required />
                 <input type="number" name="salary" placeholder="Salary" value={employee.salary} onChange={handleChange} className="form-control mb-2" required />
-                <button type="submit" className="btn btn-primary">Add Employee</button>
-                <button type="button" onClick={onBack} className="btn btn-secondary ml-2">Back</button>
+                <div className='d-grid gap-2 col-2 mx-auto'>
+                    <button type="submit" className="btn btn-primary ">Add Employee</button>
+                    <button type="button" onClick={onBack} className="btn btn-secondary ml-2">Back</button>
+                </div>
             </form>
         </div>
     );
