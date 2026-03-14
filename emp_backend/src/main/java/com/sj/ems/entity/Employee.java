@@ -16,6 +16,7 @@ public class Employee {
     private String lastname;
     private String email;
     private String department;
+    private double salary;
 
     public double getSalary() {
         return salary;
@@ -64,8 +65,5 @@ public class Employee {
     public void setDepartment(String department) {
         this.department = department;
     }
-
-    private double salary;
-
 
 }
