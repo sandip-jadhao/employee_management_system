@@ -2,19 +2,19 @@ import React,{useEffect,useState} from "react";
 import {getEmployee,deleteEmployee} from "../services/EmployeeService";
 import "../styles/EmployeeList.css";
 
-function EmployeeList(){
+function EmployeeList({onLogout}) {
 
     const [employees,setEmployees] = useState([]);
-
-    useEffect(()=>{
-        loadEmployee();
-    },[]);
 
     const loadEmployee = () =>{
         getEmployee().then((res)=>{
             setEmployees(res.data);
         });
     };
+
+    useEffect(()=>{
+        loadEmployee();
+    },[]);
 
     const handleDelete = (id)=>{
         deleteEmployee(id).then(()=>{
@@ -24,9 +24,10 @@ function EmployeeList(){
 
     return(
         <div>
-            <h2>Employee List</h2>
-
-            <table border="1">
+            <h2>Employee Management System</h2>
+            <button onClick={onLogout}>Logout</button>
+        <h2>Employee List</h2>
+            <table border="2">
                <thead>
                     <tr>
                         <th>ID</th>
@@ -42,7 +43,7 @@ function EmployeeList(){
 
                    {employees.map(emp => (
                        <tr key={emp.id}>
-                            <td>{emp.id}</td>
+                            <td>{emp.index}</td>
                             <td>{emp.firstname} {emp.lastname}</td>
                             <td>{emp.email}</td>
                             <td>{emp.department}</td>

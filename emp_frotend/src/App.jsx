@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import EmployeeList from "./components/EmployeeList";
-
+import Home from "./components/Home";
 import './App.css'
 
 function App() {
     return(
         <>
-        <EmployeeList/>
+        <Home/>
         </>
-        )
+    )
 }
 
-export default App
+export default App;

@@ -15,19 +15,9 @@ h2 {
 }
 
 /* Add employee button */
-button {
-    margin-bottom: 15px;
-    padding: 8px 16px;
-    background-color: #0d6efd;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: #0b5ed7;
-}
+
+
 
 /* Table styling */
 table {
